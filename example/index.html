@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example</title>
+
+    <style>
+        .menu li {
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .menu>li a {
+            display: inline-block;
+            margin: 0 2px;
+            outline: none;
+            text-align: center;
+            text-decoration: none;
+            font: 14px/100% sans-serif;
+            padding: .5em 2em .55em;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+            border-radius: .5em;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+            color: #d9eef7;
+            border: solid 1px #1b1c1b;
+            background: #1e7421;
+        }
+
+
+        .menu>li:hover a {
+            text-decoration: none;
+            background: #21b410;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <ul id="menu" class="menu">
+        <li><a href="http://github.com">github</a></li>
+        <li><a href="https://www.w3schools.com">w3s</a></li>
+        <li><a href="http://learnjavascript.ru">JS</a></li>
+    </ul>
+
+
+    <script>
+        menu.addEventListener('click', function (event) {
+             if(event.target.nodeName != 'A') {return}
+            let href = event.target.getAttribute('href')
+
+
+            let go = prompt('перейти?', 'да')
+
+            if(go){
+                href
+            }
+            
+            href.preventDefault()
+            
+                href.d
+
+
+        })
+
+    </script>
+
+</body>
+
+</html>

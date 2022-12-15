@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .d1 {
+            top: 15px;
+            color: rgb(251, 255, 1);
+            background-color: rgb(113, 105, 93);
+            width: 170px;
+            height: 150px;
+
+        }
+
+        .d2 {
+
+            color: rgb(255, 255, 255);
+            background-color: rgb(14, 74, 240);
+            width: 100px;
+            height: 100px;
+            margin-top: 5px;
+            margin-left: 30px;
+
+        }
+
+        .d3 {
+            color: rgb(250, 16, 16);
+            background-color: rgb(2, 30, 30);
+            width: 50px;
+            height: 60px;
+            margin-top: 2px;
+            margin-left: 20px;
+
+        }
+
+        .p3 {
+            color: blanchedalmond;
+            margin-left: 12px;
+            margin-top: 5px;
+            background-color: rgb(226, 29, 108);
+            width: 22px;
+        }
+
+
+       
+    </style>
+</head>
+
+<body>
+
+
+
+    <div id='d1' class='d1'>d1
+        <div id='d2' class='d2'>d2
+            <div id='d3' class='d3'>d3
+                <p id="p3" class="p3">p3</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        let all = document.querySelectorAll('*')
+        for( let node of all){
+            
+            node.addEventListener('click', (event) => {
+
+                event.preventDefault()
+                console.log(`погружение ${node.tagName}`)},true)
+                
+
+
+
+
+            node.addEventListener('click', (event) => {
+                
+                event.stopPropagation()
+                console.log(`всплытие ${node.tagName}`)})
+        }
+    </script>
+
+</body>
+
+</html>
